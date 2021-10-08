@@ -20,6 +20,8 @@ const port = 3000
 //     console.log(`serrver ruung ${hostName} ${port}`)
 // })
 
+
+
 app.listen(port)
 app.set('view engine', 'ejs');
 app.set('views','./assets/views');
