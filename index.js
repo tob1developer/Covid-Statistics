@@ -26,3 +26,4 @@ app.listen(port)
 app.set('view engine', 'ejs');
 app.set('views','./assets/views');
 app.use(require('./include/expressRoutes'));
+app.use(express.static(__dirname + '/assets/views/'));

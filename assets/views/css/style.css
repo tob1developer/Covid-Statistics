@@ -1,0 +1,18 @@
+
+/*header -- */
+.nameBTL{
+    color: white;
+    padding: 30px;
+    font-family: var(--bs-font-sans-serif);
+    background:blue ;
+}
+.toolBar{
+    background: #6495E8;
+    color: white;
+}
+.tableTinhHinhDich {
+    top: 80px;
+    right: 0;
+    width: 500px;
+    border: 3px solid #E5E5E5;
+}
