@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+<%- include('header'); -%>
+<link href="./css/page2.css" type="text/css"  rel="stylesheet">
+<body>
+    <div class="boxcenter">
+        <img class="headerlogo" src="https://cdn.pixabay.com/photo/2020/05/22/19/47/corona-5206882_960_720.png">
+        <h1 class="headertitle">THÔNG TIN  VỀ  COVID-19</h1>
+
+        <nav>
+            <div class="menu">
+                <ul>
+
+                    <li><a href="trang 2.html">Tổng Hợp</a></li>
+                    <li><a href="../Trang 1/trang 1.html">Tình hình trong nước</a></li>
+
+
+                </ul>
+            </div>
+
+        </nav>
+
+    </div>
+    <div class= "rows borderbt content">
+        <div class="boxcenter">
+            <div class="mg borderbt titleb"> TÌNH HÌNH TRONG NƯỚC</div>
+
+            <div class="rows">
+                <div class="boxleft mgbr">
+                    <div class="boxnews1">
+
+                        <a href="#"> Hành khách tham gia vận tải không phải xét nghiệm</a>
+                        <p> ( 17/10) Bộ Giao thông vận tải (GTVT) vừa ban hành hướng dẫn tạm thời mới về tổ chức vận tải 5 lĩnh vực đường bộ, đường thủy nội địa, hàng hải, hàng không, đường sắt trên phạm vi toàn quốc, đảm bảo thích ứng an toàn, linh hoạt, kiểm soát hiệu quả dịch COVID-19 và gắn liền với phạm vi đánh giá cấp độ dịch.
+                            <img src="img/page2/20.jpg" />
+                        </p>
+                    </div>
+                </div>
+                <div class="boxl mgbr">
+                    <p><center><b>Thống kê số ca nhiễm theo ngày</b></center></p>
+                    <table cellpadding="10" cellspacing="1" border="1" style="color:black">
+                        <tr>
+                            <td>Ngày</td>
+                            <td>Số ca nhiễm bệnh</td>
+                            <td>Số ca khỏi bệnh</td>
+                            <td>Số ca tử vong</td>
+                        </tr>
+                        <tr>
+                            <td>22/09/2021</td>
+                            <td>11527</td>
+                            <td>11919</td>
+                            <td>236</td>
+                        </tr>
+                        <tr>
+                            <td>23/09/2021</td>
+                            <td>9472</td>
+                            <td>6226</td>
+                            <td>236</td>
+                        </tr>
+                        <tr>
+                            <td>24/09/2021</td>
+                            <td>8537</td>
+                            <td>12371</td>
+                            <td>203</td>
+                        </tr>
+                        <tr>
+                            <td>25/09/2021</td>
+                            <td>9706</td>
+                            <td>10590</td>
+                            <td>180</td>
+                        </tr>
+                        <tr>
+                            <td>26/09/2021</td>
+                            <td>10111</td>
+                            <td>11477</td>
+                            <td>184</td>
+                        </tr>
+                        <tr>
+                            <td>27/09/2021</td>
+                            <td>9362</td>
+                            <td>10528</td>
+                            <td>174</td>
+                        </tr>
+                        <tr>
+                            <td>28/09/2021</td>
+                            <td>4589</td>
+                            <td>21487</td>
+                            <td>178</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="boxr">
+                    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                    <script type="text/javascript">
+                        google.charts.load('current', {'packages':['bar']});
+                        google.charts.setOnLoadCallback(drawChart);
+
+                        function drawChart() {
+                            var data = google.visualization.arrayToDataTable([
+                                ['Ngày', 'Số ca nhiễm bệnh', 'Số ca khỏi bệnh', 'Số ca tử vong'],
+                                ['22/09/2021', 11527, 11919, 236],
+                                ['23/09/2021', 9472, 6226, 236],
+                                ['24/09/2021', 8537, 12371, 203],
+                                ['25/09/2021', 9706, 10590, 180],
+                                ['26/09/2021', 10111, 11477, 184],
+                                ['27/09/2021', 9362, 10528, 174],
+                                ['28/09/2021', 4589, 21487, 178]
+                            ]);
+
+                            var options = {
+                                chart: {
+                                    title: 'THỐNG KÊ DỊCH BỆNH THEO NGÀY VIỆT NAM',
+                                },
+                                bars: 'vertical',
+                                colors:['green','red','black'],
+                                titleTextStyle:{ color: 'black',bold:'1',fontSize:'20',fontName:'Arial'},
+                                chartArea:{backgroundColor:'white'},
+                                hAxis:{textStyle:{fontSize:'15',fontName:'Arial',color:'black'},
+                                    titleTextStyle:{fontSize:'18'}
+                                },
+                                vAxis:{textStyle:{fontSize:'15',fontName:'Arial',color:'black'},gridlines:{color:'black'}},
+                                legend:{textStyle: {color: 'black',fontName:'Arial', fontSize: '15'}}
+                            };
+
+                            var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+                            chart.draw(data, google.charts.Bar.convertOptions(options));
+                        }
+                    </script>
+                    <div id="barchart_material" style="width: 800px; height: 600px;"></div>
+                </div>
+
+
+            </div>
+
+            <div class="rows">
+                <div class="thongtin" style="text-align:center">
+                    <div class="nhiem">
+                        <div class="text">SỐ CA NHIỄM</div>
+                        <div class="number">860.860</div>
+                        <div class="number">( +1320 )</div>
+                    </div>
+                    <div class="khoi">
+                        <div class="text">Khỏi</div>
+                        <div class="number">790.504</div>
+                        <div class="number">( +130 )</div>
+                    </div>
+                    <div class="tuvong">
+                        <div class="text">Tử vong</div>
+                        <div class="number">18.936</div>
+                        <div class="number"> ( +1  )</div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="boxnews2 rows borderbt typebn2">
+            <img src="img/page2/5.jpg" style="width:20%;margin-right:10px;float:left">
+            <a href="#" style="font-weight:bold" >Phó Thủ tướng Vũ Đức Đam yêu cầu khẩn trương tiêm vắc-xin cho người dưới 18 tuổi</a>
+            <P>Phó Thủ tướng yêu cầu Bộ Y tế chủ trì, phối hợp với các bộ, ngành liên quan có dự báo tình hình diễn biến dịch bệnh, nhu cầu các loại vắc-xin, thuốc, sinh phẩm, vật tư, trang thiết bị phục vụ công tác chống dịch; căn cứ tình hình sản xuất trong nước để có phương án nhập khẩu, mua trong nước cụ thể (trên quy mô cả nước) bảo đảm tiết kiệm, hiệu quả đồng thời khuyến khích phát triển công nghiệp y dược trong nước.</P>
+        </div>
+        <div class="boxnews2 rows borderbt typebn2">
+            <img src="img/page2/2.jpeg" style="width:20%;margin-right:10px;float:left">
+            <a href="#" style="font-weight:bold" >Hà Nội thêm 12 ca dương tính với SARS-CoV-2</a>
+            <P>Sở Y tế Hà Nội vừa thông báo ghi nhận 12 ca dương tính với SARS-CoV-2, trong đó có 2 ca liên quan đến BV Việt Đức, 10 ca trở về từ vùng có dịch, đã được cách ly. Những ca này chưa được Bộ Y tế công bố.</P>
+        </div>
+        <div class="boxnews2 rows typebn2">
+            <img src="img/page2/6.jpeg" style="width:20%;margin-right:10px;float:left">
+            <a href="#" style="font-weight:bold" >Bộ Y tế tiếp nhận gần 2 triệu liều vắc-xin AstraZeneca từ Ba Lan và Hàn Quốc</a>
+            <P>Chiều 15/10, tại Bộ Y tế đã diễn ra lễ tiếp nhận gần 2 triệu liều vắc-xin COVID-19 AstraZeneca của Chính phủ và nhân dân Ba Lan; Chính phủ và nhân dân Hàn Quốc viện trợ cho Việt Nam phục vụ công tác phòng chống dịch.</P>
+        </div>
+    </div>
+
+
+    <div class="rows footer" align="center">
+        <table>
+            <tr><td>BÀI TẬP NHÓM 9</td></tr>
+            <tr><td>NGUYỄN XUÂN KIÊN - B18DCVT226</td></tr>
+
+        </table>
+    </div>
+
+
+</body>
+</html>

@@ -36,15 +36,15 @@ routers.get('/path_1',(req, res) => {
 })
 
 routers.get('/path_2',(req, res) => {
-
+    res.render('page2')
 })
 
 routers.get('/path_3', (req, res) => {
-
+    res.render('page3')
 })
 
 routers.get('/path_4', (req, res) => {
-
+    res.render('page4')
 })
 
 module.exports = routers;
