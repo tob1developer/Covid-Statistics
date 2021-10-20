@@ -28,7 +28,9 @@ routers.get('/', (req, res) => {
     //     });
     // });
 
-    res.render('home')
+    res.render('home', {
+        link :  "home.ejs"
+    })
 });
 
 routers.get('/path_1',(req, res) => {
