@@ -11,7 +11,7 @@ const {render} = require("ejs");
 // app.use(express.static(__dirname + '/assets'));
 
 
-routers.get('/home', (req, res) => {
+routers.get('/', (req, res) => {
 
 
     // let options = {
@@ -45,6 +45,12 @@ routers.get('/path_3', (req, res) => {
 
 routers.get('/path_4', (req, res) => {
     res.render('page4')
+})
+routers.get('/path_5', (req, res) => {
+    res.render('page5')
+})
+routers.get('/path_6', (req, res) => {
+    res.render('page6')
 })
 
 module.exports = routers;

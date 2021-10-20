@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<%- include('header'); -%>
+<body>
+<div class="container" >
+    <div>Khai bao y ye</div>
+    <div class="row mt-1">
+        <div class="col-12 my-1">
+            <div class="text-danger text-center su_dung_cho_f0 d-none">Sử dụng cho F0 khai báo sức khoẻ và cách ly tại nhà</div>
+        </div>
+        <div class="col-12">
+            <div class="form-group">
+                <span class="text_phone" >Số điện thoại</span><span class="text-danger"> (*)</span>:
+                <input class="form-control ">
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group">
+                <span class="text_fullname" >Họ và tên</span> <span class="text-danger">(*)</span>:
+                <input type="text" class="form-control hoten input_fullname" placeholder="Họ và tên" data-bind="value:ten" style="text-transform:uppercase" maxlength="30" >
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <span class="text_birthday" >Ngày sinh</span> <span class="text-danger">(*)</span>:
+                <input class="datetimepicker-input input_birthday form-control" placeholder="DD/MM/YYYY">
+            </div>
+        </div>
+        <div class="col-6 ">
+            <div class="form-group">
+                <span class="text_gender" >Giới tính</span> <span class="text-danger">(*)</span>:
+                <div class="combobox-group">
+                    <div class="input-group combobox-control ">
+                        <input class="form-control" type="text" placeholder="Chọn giới tính" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 manhanvien d-none">
+            <div class="form-group">
+                <span class="text_staff_code">Mã nhân viên</span>:
+                <input type="text" class="form-control" placeholder="Mã nhân viên">
+            </div>
+        </div>
+        <div class="col-12 khoaphong d-none">
+            <div class="form-group">
+                <span class="text_department">Khoa/phòng</span>:
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 quoctich">
+            <div class="form-group">
+                <span class="text_nationality">Quốc tịch</span><span class="text-danger"> (*)</span>:
+                <input class=" form-control">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <div class="form-group">
+                <span class="text_province" >Tỉnh thành</span> <span class="text-danger"> (*)</span>:
+                <input class="form-control" placeholder="Tỉnh thành" >
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <div class="form-group">
+            <span class="text_district" translate="quan_huyen">Quận huyện</span> <span class="quanhuyen text-danger"> (*)</span>:
+            <input class="form-control"  autocomplete="off" tabindex="-1" id="quanhuyen-selectized" placeholder="Quận huyện"></div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <div class="form-group">
+                <span class="text_ward" >Xã phường</span> <span class="text-danger"> (*)</span>:
+                <input class="form-control" id="xaphuong-selectized" placeholder="Xã phường">
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group">
+                <span class="text_address">Số nhà, tên đường</span><span class="text-danger">(*)</span>:
+                <input type="text" class="form-control" placeholder="Số nhà, tên đường">
+            </div>
+        </div>
+        <div class="col-12 d-none">
+            <div class="form-group">
+                <span class="text_student_code" translate="cmnd_cccd">CMND/CCCD</span> <span class="text-danger text-danger-masinhvien"> (*)</span>:
+                <input type="text" class="form-control" placeholder="Nhập chính xác CMND/CCCD" >
+            </div>
+        </div>
+        <div class="col-12 d-none">
+            <div class="form-group">
+                <span class="ma_xet_nghiem">Mã xét nghiệm</span>:
+                <input type="text" class="form-control " placeholder="Nhập mã xét nghiệm" >
+            </div>
+        </div>
+        <div class="col-12 wrap_trieuchung">
+            <div class="form-group">
+                <br>
+                <span class="text_note_1 text-primary font-weight-bold" translate="ban_co_thay_nhung_trieu_chung_nao">Ông/bà hiện có những triệu chứng hay biểu hiện nào sau đây không?</span><span class="text-danger"> (*)</span>:
+                <div class="table-responsive mt-1">
+                    <table class="table table-bordered mb-0">
+                        <thead>
+                        <tr>
+                            <th class="text_symptoms" translate="dau_hieu">Dấu hiệu</th>
+                            <th width="15%" class="text-center text_yes" translate="co">Có</th>
+                            <th width="15%" class="text-center text_no" translate="khong">Không</th>
+                        </tr>
+                        </thead>
+                        <tbody id="list-trieuchung">
+                        <tr>
+                            <td>Sốt <span class="text-danger">(*)</span></td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="trieuchung_c1d8c98c-625f-4b72-bee1-7d2f5b349504" class="radio-trieuchung" value="1"></label>
+                            </td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="trieuchung_c1d8c98c-625f-4b72-bee1-7d2f5b349504" class="radio-trieuchung" value="0" checked=""></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ho <span class="text-danger">(*)</span></td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="trieuchung_a7fd793f-0005-4e5b-824b-0d9b78f62daa" class="radio-trieuchung" value="1"></label>
+                            </td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="trieuchung_a7fd793f-0005-4e5b-824b-0d9b78f62daa" class="radio-trieuchung" value="0" checked=""></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Đau họng <span class="text-danger">(*)</span></td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="trieuchung_84788402-ab6b-42b4-b112-2b175339cd5d" class="radio-trieuchung" value="1"></label>
+                            </td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="trieuchung_84788402-ab6b-42b4-b112-2b175339cd5d" class="radio-trieuchung" value="0" checked=""></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mất vị/Mất mùi <span class="text-danger">(*)</span></td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="trieuchung_bb617a80-b44f-4aba-99ad-789a64ec6f53" class="radio-trieuchung" value="1"></label>
+                            </td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="trieuchung_bb617a80-b44f-4aba-99ad-789a64ec6f53" class="radio-trieuchung" value="0" checked=""></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cảm giác mệt <span class="text-danger">(*)</span></td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="trieuchung_e4a4422c-63ea-413b-af87-085c68d84f27" class="radio-trieuchung" value="1"></label>
+                            </td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="trieuchung_e4a4422c-63ea-413b-af87-085c68d84f27" class="radio-trieuchung" value="0" checked=""></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Khó thở <span class="text-danger">(*)</span></td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="trieuchung_273ef1cf-2d21-4ebd-8b98-1597f286faca" class="radio-trieuchung" value="1"></label>
+                            </td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="trieuchung_273ef1cf-2d21-4ebd-8b98-1597f286faca" class="radio-trieuchung" value="0" checked=""></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Triệu chứng/dấu hiệu khác <span class="text-danger">(*)</span></td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="trieuchung_a07e679b-aed3-4094-b253-39fdf86c9799" class="radio-trieuchung" value="1"></label>
+                            </td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="trieuchung_a07e679b-aed3-4094-b253-39fdf86c9799" class="radio-trieuchung" value="0" checked=""></label>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br>
+            <div class="form-group xacnhan_dichte">
+                <span class="text_note_2 text-primary font-weight-bold" >Trong thời gian vừa qua</span><span class="text-danger">(*)</span>:
+                <br>
+                <div class="table-responsive mt-1">
+                    <table class="table table-bordered mb-0">
+                        <thead>
+                        <tr>
+                            <th><span class="text_epidemiological_factors" >Yếu tố dịch tễ</span> <span class="text-danger">(*)</span></th>
+                            <th width="15%" class="text-center text_yes" >Có</th>
+                            <th width="15%" class="text-center text_no" >Không</th>
+                        </tr>
+                        </thead>
+                        <tbody id="list-dichte">
+                        <tr>
+                            <td>1. Bạn có đang mắc COVID-19 không <span class="text-danger">(*)</span></td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="dichte_b00d2b38-e410-492d-a09c-207767ab3046" class="radio-dichte" value="1" data-mucdo="2"></label>
+                            </td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="dichte_b00d2b38-e410-492d-a09c-207767ab3046" class="radio-dichte" value="0" data-mucdo="2" checked=""></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2. Tiếp xúc gần ca nhiễm, ca nghi nhiễm COVID-19 trong vòng 14 ngày qua <span class="text-danger">(*)</span></td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="dichte_12079edc-995f-4f98-8065-c91f67266a47" class="radio-dichte" value="1" data-mucdo="2"></label>
+                            </td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="dichte_12079edc-995f-4f98-8065-c91f67266a47" class="radio-dichte" value="0" data-mucdo="2" checked=""></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3. Đi từ quốc gia hoặc vùng lãnh thổ khác trong vòng 14 ngày qua <span class="text-danger">(*)</span></td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="dichte_c997fe49-f7c8-4dc4-bc5b-cf814aecec4e" class="radio-dichte" value="1" data-mucdo="2"></label>
+                            </td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="dichte_c997fe49-f7c8-4dc4-bc5b-cf814aecec4e" class="radio-dichte" value="0" data-mucdo="2" checked=""></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4. Bạn có kết thúc cách ly tập trung trong vòng 14 ngày qua không? <span class="text-danger">(*)</span></td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="dichte_bea99843-5a1b-4dfb-bc9c-1d12d08e026c" class="radio-dichte" value="1" data-mucdo="0"></label>
+                            </td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="dichte_bea99843-5a1b-4dfb-bc9c-1d12d08e026c" class="radio-dichte" value="0" data-mucdo="0" checked=""></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5. Trong vòng 14 ngày qua, trong gia đình/cơ quan bạn có ai sốt hay ho không? <span class="text-danger">(*)</span></td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="dichte_a6924294-262c-49dc-9f7d-0065c618f03b" class="radio-dichte" value="1" data-mucdo="0"></label>
+                            </td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="dichte_a6924294-262c-49dc-9f7d-0065c618f03b" class="radio-dichte" value="0" data-mucdo="0" checked=""></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6. Bạn đã xuất viện do điều trị COVID-19 trong vòng 14 ngày qua không? <span class="text-danger">(*)</span></td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="dichte_3ef388e3-1619-44de-800c-fc4c4a1f55d1" class="radio-dichte" value="1" data-mucdo="0"></label>
+                            </td>
+                            <td class="text-center td-center">
+                                <label class="lb-radio"><input type="radio" name="dichte_3ef388e3-1619-44de-800c-fc4c4a1f55d1" class="radio-dichte" value="0" data-mucdo="0" checked=""></label>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="mb-1 d-none thongtinthem">
+                <span class="text_note text-primary font-weight-bold">Vui lòng cung cấp thêm thông tin triệu chứng, dịch tễ, lịch sử di chuyển</span><span class="text-danger"> (*)</span>:
+            </div>
+            <br>
+            <div class="form-group">
+                <textarea rows="2" class="form-control input_note" placeholder="Vui lòng cung cấp thêm thông tin về triệu chứng hay dấu hiệu khác nếu có" ></textarea>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group"></div>
+            <div id="captcha">
+                <canvas id="captcha" width="150" height="50"></canvas>
+            </div>
+        </div>
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="button">Gui</button>
+        </div>
+    </div>
+</div>
+<%- include('footer'); -%>
+</body>
+</html>

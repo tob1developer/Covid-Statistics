@@ -16,3 +16,14 @@
     width: 500px;
     border: 3px solid #E5E5E5;
 }
+.table-2 {
+    top: 80px;
+    right: 0;
+    border: 3px solid #E5E5E5;
+}
+.body-1{
+    padding: 50px;
+}
+.div-text{
+    text-align: center;
+}

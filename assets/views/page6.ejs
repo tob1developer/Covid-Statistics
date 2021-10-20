@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<%- include('header'); -%>
+<link href="./css/page6.css" type="text/css"  rel="stylesheet">
+<body>
+    <div class="container">
+        <div _ngcontent-wwy-c9="" class="row">
+            <div _ngcontent-wwy-c9="" class="col-lg-3 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group">
+                    <label _ngcontent-wwy-c9="" for=""> Đăng kí mũi tiêm thứ <span _ngcontent-wwy-c9="" class="text-danger">(*)</span></label>
+                    <input _ngcontent-wwy-c9="" aria-describedby="helpId" class="form-control ng-pristine ng-invalid ng-touched" formcontrolname="fullname" id="fullname" type="text" >
+                </div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-12 mb-2">
+                <h6 _ngcontent-wwy-c9="" class="sfbold">1. Thông tin người đăng ký tiêm</h6>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-lg-3 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group">
+                    <label _ngcontent-wwy-c9="" for=""> Họ và tên <span _ngcontent-wwy-c9="" class="text-danger">(*)</span></label><input _ngcontent-wwy-c9="" aria-describedby="helpId" class="form-control ng-pristine ng-invalid ng-touched" formcontrolname="fullname" id="fullname" type="text" placeholder="Họ và tên"><!---->
+                </div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-lg-3 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group">
+                    <label _ngcontent-wwy-c9="" for=""> Ngày sinh <span _ngcontent-wwy-c9="" class="text-danger">(*)</span></label><input _ngcontent-wwy-c9="" class="form-control w-100 ng-untouched ng-pristine ng-invalid" formcontrolname="dateOfBirth" placeholder="Ngày/Tháng/Năm" aria-haspopup="dialog" min="1900-01-31T16:53:20Z" max="2021-10-21T09:11:33Z">
+                    <mat-datepicker-toggle _ngcontent-wwy-c9="" class="iconfix mat-datepicker-toggle" matsuffix="" tabindex="-1">
+                        <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
+                        <div class="mat-button-focus-overlay"></div>
+                    </mat-datepicker-toggle>
+                    <mat-datepicker _ngcontent-wwy-c9=""></mat-datepicker>
+                </div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-lg-3 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group">
+                    <label _ngcontent-wwy-c9="" for=""> Giới tính <span _ngcontent-wwy-c9="" class="text-danger">(*)</span></label>
+                    <ng-select _ngcontent-wwy-c9="" formcontrolname="gender" role="listbox" class="ng-select ng-select-single ng-select-searchable ng-select-clearable ng-untouched ng-pristine ng-invalid">
+                        <div class="ng-select-container">
+                            <div class="ng-value-container">
+                                <div class="ng-input"><input class="form-control ng-pristine ng-invalid ng-touched" role="combobox" type="text" autocorrect="off" autocapitalize="off" autocomplete="a26695a0f41c" aria-expanded="false"></div>
+                            </div>
+                            <span class="ng-arrow-wrapper">
+                                <span class="ng-arrow">
+                                </span>
+                            </span>
+                        </div>
+                        <!---->
+                    </ng-select>
+                    <!---->
+                </div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-lg-3 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group">
+                    <label _ngcontent-wwy-c9="" for="">
+                        Số điện thoại <!----><span _ngcontent-wwy-c9="" class="text-danger ng-star-inserted">(*)</span>
+                    </label>
+                    <input _ngcontent-wwy-c9="" aria-describedby="helpId" class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="phoneNumber" nowhitespace="" type="text" placeholder="Số điện thoại">
+                </div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-lg-3 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group">
+                    <label _ngcontent-wwy-c9="" for=""> Email </label>
+                    <input _ngcontent-wwy-c9="" aria-describedby="helpId" class="form-control ng-untouched ng-pristine ng-valid" formcontrolname="email" nowhitespace="" type="email" placeholder="Email">
+                </div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-lg-3 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group">
+                    <label _ngcontent-wwy-c9="" for="">
+                        Số CMND/CCCD/HC
+                        <span _ngcontent-wwy-c9="" class="text-danger ng-star-inserted">(*)</span>
+                    </label>
+                    <input _ngcontent-wwy-c9="" aria-describedby="helpId" class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="identification" nowhitespace="" type="text" placeholder="Số CMND/CCCD/HC"><!---->
+                </div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-lg-3 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group">
+                    <label _ngcontent-wwy-c9="" for=""> Số thẻ BHYT </label>
+                    <input _ngcontent-wwy-c9="" aria-describedby="helpId" class="form-control ng-untouched ng-pristine ng-valid" formcontrolname="healthInsuranceNumber" nowhitespace="" type="text" placeholder="Số thẻ BHYT"><!---->
+                </div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-lg-3 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group">
+                    <label _ngcontent-wwy-c9="" for=""> Nghề nghiệp
+                    </label>
+                    <input _ngcontent-wwy-c9="" class="form-control ng-untouched ng-pristine ng-valid" formcontrolname="jobName" maxlength="200" type="text" placeholder="Nghề nghiệp"><!---->
+                </div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-lg-3 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group"><label _ngcontent-wwy-c9="" for=""> Đơn vị công tác </label><input _ngcontent-wwy-c9="" class="form-control ng-untouched ng-pristine ng-valid" formcontrolname="workplace" maxlength="255" type="text" placeholder="Đơn vị công tác"></div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-lg-9 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group"><label _ngcontent-wwy-c9="" for="">Địa chỉ hiện tại</label><input _ngcontent-wwy-c9="" aria-describedby="helpId" class="form-control ng-untouched ng-pristine ng-valid" formcontrolname="address" maxlength="255" type="text" placeholder="Địa chỉ hiện tại"></div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-lg-3 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group">
+                    <label _ngcontent-wwy-c9="" for="">Tỉnh/Thành phố</label><span _ngcontent-wwy-c9="" class="text-danger">(*)</span>
+                    <ng-select _ngcontent-wwy-c9="" bindlabel="name" bindvalue="provinceCode" formcontrolname="provinceCode" role="listbox" class="ng-select ng-select-single ng-select-searchable ng-select-clearable ng-untouched ng-pristine ng-invalid">
+                        <div class="ng-select-container">
+                            <div class="ng-value-container">
+                                <div class="ng-input">
+                                    <input class="form-control ng-pristine ng-invalid ng-touched" role="combobox" type="text" autocorrect="off" autocapitalize="off" autocomplete="a34425b8681b" aria-expanded="false">
+                                </div>
+                            </div>
+                           <span class="ng-arrow-wrapper"><span class="ng-arrow"></span></span>
+                        </div>
+                    </ng-select>
+                </div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-lg-3 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group">
+                    <label _ngcontent-wwy-c9="" for="">Quận/Huyện</label><span _ngcontent-wwy-c9="" class="text-danger">(*)</span>
+                    <ng-select _ngcontent-wwy-c9="" bindlabel="name" bindvalue="districtCode" formcontrolname="districtCode" role="listbox" class="ng-select ng-select-single ng-select-searchable ng-select-clearable ng-select-disabled ng-untouched ng-pristine">
+                        <div class="ng-select-container">
+                            <div class="ng-value-container">
+                                <div class="ng-input"><input class="form-control ng-pristine ng-invalid ng-touched" role="combobox" type="text" autocorrect="off" autocapitalize="off" autocomplete="ac1f6f2cd431" aria-expanded="false"></div>
+                            </div>
+                            <span class="ng-arrow-wrapper"><span class="ng-arrow"></span></span>
+                        </div>
+                    </ng-select>
+                </div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-lg-6 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group">
+                    <label _ngcontent-wwy-c9="" for="">Xã/Phường</label><span _ngcontent-wwy-c9="" class="text-danger">(*)</span>
+                    <ng-select _ngcontent-wwy-c9="" bindlabel="name" bindvalue="wardCode" formcontrolname="wardCode" role="listbox" class="ng-select ng-select-single ng-select-searchable ng-select-clearable ng-select-disabled ng-untouched ng-pristine">
+                        <div class="ng-select-container">
+                            <div class="ng-value-container">
+                                <div class="ng-input">
+                                    <input class="form-control ng-pristine ng-invalid ng-touched" role="combobox" type="text" autocorrect="off" autocapitalize="off" autocomplete="a1dc484c7a0d" aria-expanded="false">
+                                </div>
+                            </div>
+                            <span class="ng-arrow-wrapper"><span class="ng-arrow"></span></span>
+                        </div>
+                    </ng-select>
+                </div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-lg-3 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group">
+                    <label _ngcontent-wwy-c9="" for=""> Dân tộc </label>
+                    <ng-select _ngcontent-wwy-c9="" bindlabel="name" bindvalue="ethnicityCode" formcontrolname="ethnicityCode" role="listbox" class="ng-select ng-select-single ng-select-searchable ng-select-clearable ng-untouched ng-pristine ng-valid">
+                        <div class="ng-select-container ng-has-value">
+                            <div class="ng-value-container">
+                                <div class="ng-value ng-star-inserted"></div>
+                                <div class="ng-input">
+                                    <input  class="form-control ng-pristine ng-invalid ng-touched" role="combobox" type="text" autocorrect="off" autocapitalize="off" autocomplete="a6f691f6d320" aria-expanded="false">
+                                </div>
+                            </div>
+                        </div>
+                    </ng-select>
+                </div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-lg-3 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group">
+                    <label _ngcontent-wwy-c9="" for=""> Quốc tịch </label>
+                    <ng-select _ngcontent-wwy-c9="" bindlabel="nationName" bindvalue="nationCode" formcontrolname="nationCode" role="listbox" class="ng-select ng-select-single ng-select-searchable ng-select-clearable ng-untouched ng-pristine ng-valid">
+                        <div class="ng-select-container ng-has-value">
+                            <div class="ng-value-container">
+                                <div class="ng-value ng-star-inserted">
+                                </div>
+                                <div class="ng-input"><input class="form-control ng-pristine ng-invalid ng-touched" role="combobox" type="text" autocorrect="off" autocapitalize="off" autocomplete="a3dde85d0da5" aria-expanded="false">
+                                </div>
+                            </div>
+                        </div>
+                    </ng-select>
+                </div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-lg-6 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group">
+                    <label _ngcontent-wwy-c9="" for=""> Nhóm ưu tiên <span _ngcontent-wwy-c9="" class="text-danger">(*)</span></label>
+                    <ng-select _ngcontent-wwy-c9="" bindlabel="name" bindvalue="id" class="select-responsive ng-select ng-select-single ng-select-searchable ng-select-clearable ng-untouched ng-pristine ng-valid" formcontrolname="objectId" role="listbox">
+                        <div class="ng-select-container ng-has-value">
+                            <div class="ng-value-container">
+                                <div class="ng-value ng-star-inserted">
+                                </div>
+                                <div class="ng-input">
+                                    <input class="form-control ng-pristine ng-invalid ng-touched" role="combobox" type="text" autocorrect="off" autocapitalize="off" autocomplete="a81064d39766" aria-expanded="false">
+                                </div>
+                            </div>
+                        </div>
+                    </ng-select>
+                </div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-12 mb-2">
+                <h6 _ngcontent-wwy-c9="" class="sfbold">2. Thông tin đăng ký tiêm chủng</h6>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-lg-3 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group mb-0">
+                    <label _ngcontent-wwy-c9=""> Ngày muốn được tiêm (dự kiến) </label>
+                    <input _ngcontent-wwy-c9="" class="form-control w-100 ng-untouched ng-pristine ng-valid" formcontrolname="dateOfInjectRegistration" placeholder="Ngày/Tháng/Năm" aria-haspopup="dialog" min="1900-01-31T16:53:20Z">
+                </div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-lg-3 col-md-12">
+                <div _ngcontent-wwy-c9="" class="form-group">
+                    <label _ngcontent-wwy-c9="" for=""> Buổi tiêm mong muốn </label>
+                    <ng-select _ngcontent-wwy-c9="" formcontrolname="partOfInjectionDay" role="listbox" class="ng-select ng-select-single ng-select-searchable ng-select-clearable ng-untouched ng-pristine ng-valid">
+                        <div class="ng-select-container">
+                            <div class="ng-value-container">
+                                <div class="ng-input"><input class="form-control ng-pristine ng-invalid ng-touched" role="combobox" type="text" autocorrect="off" autocapitalize="off" autocomplete="a5718c6808bf" aria-expanded="false"></div>
+                            </div>
+                           <span class="ng-arrow-wrapper"><span class="ng-arrow"></span></span>
+                        </div>
+                    </ng-select>
+                </div>
+            </div>
+            <div _ngcontent-wwy-c9="" class="col-12">
+                <h6 _ngcontent-wwy-c9="" class="sfbold text-danger">Lưu ý:</h6>
+                <ul _ngcontent-wwy-c9="" class="text-danger">
+                    <li _ngcontent-wwy-c9=""> Việc đăng ký thông tin hoàn toàn bảo mật và phục vụ cho chiến dịch tiêm chủng Vắc xin COVID - 19 </li>
+                    <li _ngcontent-wwy-c9=""> Xin vui lòng kiểm tra kỹ các thông tin bắt buộc(VD: Họ và tên, Ngày tháng năm sinh, Số điện thoại, Số CMND/CCCD/HC ...) </li>
+                    <li _ngcontent-wwy-c9=""> Bằng việc nhấn nút "Xác nhận", bạn hoàn toàn hiểu và đồng ý chịu trách nhiệm với các thông tin đã cung cấp. </li>
+                    <li _ngcontent-wwy-c9=""> Cá nhân/Tổ chức đăng ký thành công trên hệ thống sẽ được đưa vào danh sách đặt tiêm. Cơ sở y tế sẽ thông báo lịch tiêm khi có vắc xin và kế hoạch tiêm được phê duyệt. Trân trọng cảm ơn! </li>
+                </ul>
+            </div>
+        </div>
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="button">Gui</button>
+        </div>
+    </div>
+</body>
+</html>
