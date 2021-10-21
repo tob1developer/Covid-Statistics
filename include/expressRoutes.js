@@ -13,24 +13,17 @@ const {render} = require("ejs");
 
 routers.get('/', (req, res) => {
 
-
-    // let options = {
-    // 'method': 'GET',
-    // 'url': 'https://api.covid19api.com/countries',
-    // 'headers': {
-    // }
-    // };
-    // request(options, function (error, response) {
-    //     if (error) throw new Error(error);
-    //     // console.log(response.body);
-    //     res.render('home', {
-    //         data: response.body
-    //     });
-    // });
-
-    res.render('home', {
-        link :  "home.ejs"
+    let data1
+    getRequest('https://api.covid19api.com/country/vietnam?from=2021-10-01T00:00:00Z&to=2020-04-01T00:00:00Z').then(function (body1) {
+        data1 = body1
+        return getRequest('https://api.covid19api.com/summary');
+    }).then(function (data2) {
+        res.render('home', {
+            data1: data1,
+            data2: data2
+        });
     })
+
 });
 
 routers.get('/path_1',(req, res) => {
@@ -54,5 +47,18 @@ routers.get('/path_5', (req, res) => {
 routers.get('/path_6', (req, res) => {
     res.render('page6')
 })
+
+
+function getRequest(url){
+    return new Promise(function (success, failure) {
+        request(url, function (error, response, body) {
+            if (!error && response.statusCode === 200) {
+                success(body);
+            } else {
+                failure(error);
+            }
+        });
+    });
+}
 
 module.exports = routers;
