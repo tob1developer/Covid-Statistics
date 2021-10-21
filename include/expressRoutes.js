@@ -17,7 +17,6 @@ routers.get('/', (req, res) => {
     getRequest('https://api.covid19api.com/summary').then(function (body) {
         res.render('home', {
             data: body,
-
         });
     })
 

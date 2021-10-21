@@ -95,3 +95,6 @@ html {
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
+.btnSummit {
+    padding-bottom: 10px;
+}

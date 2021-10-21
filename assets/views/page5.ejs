@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html>
 <%- include('header'); -%>
+<link href="./css/page5.css" type="text/css"  rel="stylesheet">
 <body>
 <div class="container" >
-    <div>Khai bao y ye</div>
+    <h1>Khai báo y tế</h1>
     <div class="row mt-1">
-        <div class="col-12 my-1">
-            <div class="text-danger text-center su_dung_cho_f0 d-none">Sử dụng cho F0 khai báo sức khoẻ và cách ly tại nhà</div>
-        </div>
         <div class="col-12">
             <div class="form-group">
-                <span class="text_phone" >Số điện thoại</span><span class="text-danger"> (*)</span>:
-                <input class="form-control ">
+                <span class="" >Số điện thoại</span><span class="text-danger"> (*)</span>:
+                <input id="form_sdt" class="form-control ">
             </div>
         </div>
         <div class="col-12">
             <div class="form-group">
                 <span class="text_fullname" >Họ và tên</span> <span class="text-danger">(*)</span>:
-                <input type="text" class="form-control hoten input_fullname" placeholder="Họ và tên" data-bind="value:ten" style="text-transform:uppercase" maxlength="30" >
+                <input name="form_ho_ten" type="text" class="form-control input-text-full" placeholder="Họ và tên"  maxlength="30" >
             </div>
         </div>
         <div class="col-6">
             <div class="form-group">
                 <span class="text_birthday" >Ngày sinh</span> <span class="text-danger">(*)</span>:
-                <input class="datetimepicker-input input_birthday form-control" placeholder="DD/MM/YYYY">
+                <input id="from_date" class="datetimepicker-input input_birthday form-control" placeholder="DD/MM/YYYY">
             </div>
         </div>
         <div class="col-6 ">
@@ -31,68 +29,52 @@
                 <span class="text_gender" >Giới tính</span> <span class="text-danger">(*)</span>:
                 <div class="combobox-group">
                     <div class="input-group combobox-control ">
-                        <input class="form-control" type="text" placeholder="Chọn giới tính" >
+                        <input id="from_sex" class="form-control" type="text" placeholder="Chọn giới tính" >
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-12 manhanvien d-none">
-            <div class="form-group">
-                <span class="text_staff_code">Mã nhân viên</span>:
-                <input type="text" class="form-control" placeholder="Mã nhân viên">
-            </div>
-        </div>
-        <div class="col-12 khoaphong d-none">
-            <div class="form-group">
-                <span class="text_department">Khoa/phòng</span>:
-                <input type="text" class="form-control">
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-3 quoctich">
             <div class="form-group">
                 <span class="text_nationality">Quốc tịch</span><span class="text-danger"> (*)</span>:
-                <input class=" form-control">
+                <input id="form_quoc_tich" class=" form-control">
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-3">
             <div class="form-group">
                 <span class="text_province" >Tỉnh thành</span> <span class="text-danger"> (*)</span>:
-                <input class="form-control" placeholder="Tỉnh thành" >
+                <input id="form_tinh_thanh" class="form-control" placeholder="Tỉnh thành" >
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-3">
             <div class="form-group">
             <span class="text_district" translate="quan_huyen">Quận huyện</span> <span class="quanhuyen text-danger"> (*)</span>:
-            <input class="form-control"  autocomplete="off" tabindex="-1" id="quanhuyen-selectized" placeholder="Quận huyện"></div>
+            <input id="form_quan_huyen" class="form-control"  autocomplete="off" tabindex="-1" id="quanhuyen-selectized" placeholder="Quận huyện"></div>
         </div>
         <div class="col-12 col-sm-6 col-md-3">
             <div class="form-group">
                 <span class="text_ward" >Xã phường</span> <span class="text-danger"> (*)</span>:
-                <input class="form-control" id="xaphuong-selectized" placeholder="Xã phường">
+                <input id="form_xa_phuong" class="form-control" id="xaphuong-selectized" placeholder="Xã phường">
             </div>
         </div>
         <div class="col-12">
             <div class="form-group">
                 <span class="text_address">Số nhà, tên đường</span><span class="text-danger">(*)</span>:
-                <input type="text" class="form-control" placeholder="Số nhà, tên đường">
+                <input id="form_so_nha" type="text" class="form-control" placeholder="Số nhà, tên đường">
             </div>
         </div>
         <div class="col-12 d-none">
             <div class="form-group">
                 <span class="text_student_code" translate="cmnd_cccd">CMND/CCCD</span> <span class="text-danger text-danger-masinhvien"> (*)</span>:
-                <input type="text" class="form-control" placeholder="Nhập chính xác CMND/CCCD" >
-            </div>
-        </div>
-        <div class="col-12 d-none">
-            <div class="form-group">
-                <span class="ma_xet_nghiem">Mã xét nghiệm</span>:
-                <input type="text" class="form-control " placeholder="Nhập mã xét nghiệm" >
+                <input id="form_cmnd" type="text" class="form-control" placeholder="Nhập chính xác CMND/CCCD" >
             </div>
         </div>
         <div class="col-12 wrap_trieuchung">
             <div class="form-group">
                 <br>
-                <span class="text_note_1 text-primary font-weight-bold" translate="ban_co_thay_nhung_trieu_chung_nao">Ông/bà hiện có những triệu chứng hay biểu hiện nào sau đây không?</span><span class="text-danger"> (*)</span>:
+                <span class="text_note_1 text-primary font-weight-bold">
+                    Ông/bà hiện có những triệu chứng hay biểu hiện nào sau đây không?
+                </span><span class="text-danger"> (*)</span>:
                 <div class="table-responsive mt-1">
                     <table class="table table-bordered mb-0">
                         <thead>
@@ -258,11 +240,40 @@
                 <canvas id="captcha" width="150" height="50"></canvas>
             </div>
         </div>
+        <br>
         <div class="d-grid gap-2">
-            <button class="btn btn-primary" type="button">Gui</button>
+            <button id="btn" class="btn btn-primary btnSummit" type="submit" onclick="sendForm()">Gửi</button>
         </div>
+        <br>
     </div>
 </div>
-<%- include('footer'); -%>
 </body>
+<%- include('footer'); -%>
+<script>
+        let form_sdt = document.getElementById("form_sdt")
+        let form_ho_ten = document.getElementById("form_ho_ten")
+        let form_quoc_tich = document.getElementById("form_quoc_tich")
+        let form_tinh_thanh = document.getElementById("form_tinh_thanh")
+        let form_xa_phuong = document.getElementById("form_xa_phuong")
+        let form_so_nha = document.getElementById("form_so_nha")
+        let from_sex = document.getElementById("from_sex")
+        let form_quan_huyen = document.getElementById("form_quan_huyen")
+
+        // console.log(obj)
+        let btn = document.getElementById("btn")
+        function sendForm() {
+            let obj = '{'
+                +`"form_sdt" : ${form_sdt.value},`
+                +`"form_ho_ten" : ${form_ho_ten.value},`
+                +`"form_quoc_tich" : ${form_quoc_tich.value},`
+                +`"form_tinh_thanh" : ${form_tinh_thanh.value},`
+                +`"form_xa_phuong" : ${form_xa_phuong.value},`
+                +`"form_so_nha" : ${form_so_nha.value},`
+                +`"from_sex" : ${from_sex.value},`
+                +`"form_quan_huyen" : ${form_quan_huyen.value},`
+
+                +'}';
+            console.log(obj)
+        }
+</script>
 </html>

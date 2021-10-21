@@ -48,6 +48,69 @@ nav .menu ul li a{
 .content{
     background-color:#FFF;
 }
+.thongtin>div
+{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 50px 10px;
+    width: 200px;
+    height: 80px;
+}
+
+.thongtin>.nhiem
+{
+    color: #FF392B;
+}
+
+.thongtin>.khoi
+{
+    color: #00945E;
+}
+
+.thongtin>.tuvong
+{
+    color: #222;
+}
+
+.thongtin>.dieutri
+{
+    color: #E18425;
+}
+
+.thongtin>div .text
+{
+    padding: 10px 0px;
+}
+
+.thongtin>.nhiem>.text
+{
+    background-color: rgba(255, 57, 43, 0.1);
+}
+
+.thongtin>.khoi>.text
+{
+    background-color: rgba(0, 148, 94, 0.2);
+}
+
+.thongtin>.tuvong>.text
+{
+    background-color: #E5E5E5;
+}
+
+.thongtin>.dieutri>.text
+{
+    background-color: #FCF2E9;
+}
+
+.thongtin>div .number
+{
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 20px;
+}
 .boxcenter{
     width:86%;
     margin:0 auto;
@@ -62,6 +125,7 @@ nav .menu ul li a{
 .marginbt{
     margin-bottom: 2%;
 }
+
 .titleb{
     color:#2e3192;
     font-size:24px;
@@ -98,11 +162,7 @@ nav .menu ul li a{
     width:32%;
     float:left;
 }
-.typebn2{
-    margin-bottom:10px;
-    margin:10px auto;
-    padding-bottom:20px;
-}
+
 .boxnews2 img{
     width:100%;
 }
@@ -118,7 +178,26 @@ nav .menu ul li a{
     padding-bottom:10px;
 }
 
+.boxl{
+    float:left;
+    width:29%;
+    padding-top:7%;
+}
+.boxl b{
+    font-size:30px ;
+    line-height:120%;
+}
+.boxl table{
+    text-align:center;
+}
+
+.boxr{
+    float:left;
+    width:69%;
+    padding-bottom:30px;
+}
 /*footer*/
+
 .footer{
     background-color:#2e3192;
     min-height:100px;
@@ -127,8 +206,3 @@ nav .menu ul li a{
     text-align:center;
     color:#FFF;
 }
-
-
-
-
-
