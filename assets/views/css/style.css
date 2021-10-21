@@ -5,9 +5,10 @@
     padding: 30px;
     font-family: var(--bs-font-sans-serif);
     background:blue ;
+    font-size: 30px;
 }
 .toolBar{
-    background: #6495E8;
+    background: #dcdcec;
     color: white;
 }
 .tableTinhHinhDich {
@@ -26,4 +27,26 @@
 }
 .div-text{
     text-align: center;
+}
+
+h1 {
+    font-family: roboto condensed,sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: #555;
+    margin: 0;
+}
+.number-home {
+    font-family: noto sans,sans-serif;
+    font-size: 40px;
+    text-align:center;
+}
+.ass{
+    text-align:center;
+    border: 3px solid beige;
+    padding: 10px;
+    border-radius:10px;
+}
+.text-size{
+    font-size: 30px;
 }

@@ -2,28 +2,32 @@
 <html>
 <%- include('header'); -%>
 <body >
+
     <div class="container">
+        <br>
         <div class="row">
 
-            <div class="col-6 div-text">
-
-                <% listCountry = JSON.parse(data2) %>
-                <% world = listCountry.Global %>
+            <% listCountry = JSON.parse(data) %>
+            <% world = listCountry.Global %>
 
 
-                <!--                https://developers.google.com/chart/interactive/docs/gallery/columnchart-->
-                <div >NewConfirmed</div>
-                <div ><%= world["NewConfirmed"]%></div>
-                <div >TotalConfirmed</div>
-                <div ><%= world["TotalConfirmed"]%></div>
-                <div >NewDeaths</div>
-                <div ><%= world["NewDeaths"]%></div>
-                <div >TotalDeaths</div>
-                <div ><%= world["TotalDeaths"]%></div>
-                <div >Date</div>
+
+            <div  class="ass">
+                <h1>Coronavirus Cases:</h1>
+                <div class="maincounter-number">
+                    <span class="number-home" style="color:#aaa"><%= world["NewConfirmed"]%> </span>
+                </div>
+
+                <div class="text-size" >TotalConfirmed</div>
+                <div class="number-home" ><%= world["TotalConfirmed"]%></div>
+                <div class="text-size">NewDeaths</div>
+                <div class="number-home"><%= world["NewDeaths"]%></div>
+                <div class="text-size">TotalDeaths</div>
+                <div class="number-home"><%= world["TotalDeaths"]%></div>
+                <div class="text-size">Date update:</div>
                 <div ><%= world["Date"]%></div>
             </div>
-
+            <br>
             <div id="regions_div" ></div>
 
 
@@ -36,6 +40,7 @@
             <tr role="row">
                 <th width="1%" class="sorting_disabled" rowspan="1" colspan="1" aria-label="#" style="width: 20.8889px;">#</th>
                 <th width="100" class="sorting" tabindex="0" aria-controls="main_table_countries_today" rowspan="1" colspan="1" aria-label="Country,Other: activate to sort column ascending" style="width: 99.8889px;">Country,<br>Other</th>
+                <th width="100" class="sorting" tabindex="0" aria-controls="main_table_countries_today" rowspan="1" colspan="1" aria-label="Country,Other: activate to sort column ascending" style="width: 99.8889px;">Code</th>
                 <th width="20" class="sorting_desc" tabindex="0" aria-controls="main_table_countries_today" rowspan="1" colspan="1" aria-label="TotalCases: activate to sort column ascending" style="width: 64.8889px;" aria-sort="descending">TotalConfirmed</th>
                 <th width="30" class="sorting" tabindex="0" aria-controls="main_table_countries_today" rowspan="1" colspan="1" aria-label="NewCases: activate to sort column descending" style="width: 41.8889px;">NewConfirmed</th>
                 <th width="30" class="sorting" tabindex="0" aria-controls="main_table_countries_today" rowspan="1" colspan="1" aria-label="TotalDeaths: activate to sort column descending" style="width: 47.8889px;">TotalDeaths</th>
@@ -45,16 +50,17 @@
             <tbody>
             <% temp = 1  %>
             <%  listCountry.Countries.forEach((item) => { %>
-            <tr class="total_row_world odd" role="row">
-                <td><%= temp %></td>
-                <td style="font-weight: bold; font-size:15px; text-align:left;" ><%= item["Country"] %></td>
-                <td><%= item["TotalConfirmed"] %></td>
-                <td><%= item["NewConfirmed"] %></td>
-                <td><%= item["TotalDeaths"] %></td>
-                <td><%= item["NewDeaths"] %></td>
-                <td><%= item["Date"] %></td>
-                <% temp++ %>
-            </tr>
+                <tr class="total_row_world odd" role="row">
+                    <td><%= temp %></td>
+                    <td style="font-weight: bold; font-size:15px; text-align:left;" ><%= item["Country"] %></td>
+                    <td><%= item["CountryCode"] %></td>
+                    <td><%= item["TotalConfirmed"] %></td>
+                    <td><%= item["NewConfirmed"] %></td>
+                    <td><%= item["TotalDeaths"] %></td>
+                    <td><%= item["NewDeaths"] %></td>
+                    <td><%= item["Date"] %></td>
+                    <% temp++ %>
+                </tr>
             <% }) %>
             </tbody>
         </table>
@@ -72,7 +78,7 @@
 
         function drawRegionsMap() {
 
-            var data = google.visualization.arrayToDataTable([
+            var dataChart = google.visualization.arrayToDataTable([
                 ['Country', 'TotalConfirmed','TotalDeaths'],
                 <%  listCountry.Countries.forEach((item) => { %>
                 ['<%= item["CountryCode"] %>', <%= item["TotalConfirmed"] %>, <%= item["TotalDeaths"] %>],
@@ -84,7 +90,7 @@
 
             var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
-            chart.draw(data, options);
+            chart.draw(dataChart, options);
         }
     </script>
 

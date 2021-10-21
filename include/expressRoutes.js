@@ -13,14 +13,11 @@ const {render} = require("ejs");
 
 routers.get('/', (req, res) => {
 
-    let data1
-    getRequest('https://api.covid19api.com/country/vietnam?from=2021-10-01T00:00:00Z&to=2020-04-01T00:00:00Z').then(function (body1) {
-        data1 = body1
-        return getRequest('https://api.covid19api.com/summary');
-    }).then(function (data2) {
+
+    getRequest('https://api.covid19api.com/summary').then(function (body) {
         res.render('home', {
-            data1: data1,
-            data2: data2
+            data: body,
+
         });
     })
 
