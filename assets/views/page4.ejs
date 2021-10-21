@@ -1,10 +1,63 @@
 <!DOCTYPE html>
 <html lang="vi">
 <%- include('header'); -%>
+<link rel="stylesheet" href="css/page4.css">
 <body>
-<title>Biểu đồ về tình hình covid-19 trên thế giới</title>
-<meta charset="utf-8">
-<link rel="stylesheet" href="index.css">
+<div class="container">
+    <title>Biểu đồ về tình hình covid-19 trên thế giới</title>
+    <div id="bieu-do">
+        <div id="chart_div" style="width: 1200px; height: 300px;"></div>
+        <div id="duoi">
+            <span id="so-lieu">
+                <table border="1" >
+                    <tr>
+                        <td>Châu lục</td>
+                        <td>Số ca nhiễm</td>
+                        <td>Số ca tử vong</td>
+
+                    </tr>
+                    <tr>
+                        <td>Châu âu</td>
+                        <td>2.564.565</td>
+                        <td>243.256</td>
+
+                    </tr>
+                    <tr>
+                        <td>Châu mỹ</td>
+                        <td>2.124.562</td>
+                        <td>356.401</td>
+
+                    </tr>
+                    <tr>
+                        <td>Châu Á</td>
+                        <td>800.450</td>
+                        <td>110.452</td>
+
+                    </tr>
+                    <tr>
+                        <td>Châu Phi</td>
+                        <td>1.564.521</td>
+                        <td>152.403</td>
+
+                    </tr>
+                    <tr>
+                        <td>Châu Đại Dương</td>
+                        <td>105.212</td>
+                        <td>23.560</td>
+                    </tr>
+                </table>
+                <br/>
+            <h4>số liệu thống kê về ca nhiễm và ca tử vọng tại 1 số quốc gia trên thế giới</h4>
+            </span>
+            <span id="video">
+                <iframe width="440px" height="260px" src="https://www.youtube.com/embed/_5xV9Edscok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+                <h4>Cập nhật tình hình dịch trên thế giới</h4>
+            </span>
+        </div>
+    </div>
+</div>
+
+</body>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
     google.charts.load('current', {packages: ['corechart', 'bar']});
@@ -57,62 +110,4 @@
         chart.draw(data, options);
     }
 </script>
-</div>
-<div id="bieu-do">
-    <div id="chart_div" style="width: 1200px; height: 300px;"></div>
-
-    <div id="duoi">
-
-    <span id="so-lieu">
-
-        <table border="1" >
-        <tr>
-            <td>Châu lục</td>
-            <td>Số ca nhiễm</td>
-            <td>Số ca tử vong</td>
-
-        </tr>
-        <tr>
-            <td>Châu âu</td>
-            <td>2.564.565</td>
-            <td>243.256</td>
-
-        </tr>
-        <tr>
-            <td>Châu mỹ</td>
-            <td>2.124.562</td>
-            <td>356.401</td>
-
-        </tr>
-        <tr>
-            <td>Châu Á</td>
-            <td>800.450</td>
-            <td>110.452</td>
-
-        </tr>
-        <tr>
-            <td>Châu Phi</td>
-            <td>1.564.521</td>
-            <td>152.403</td>
-
-        </tr>
-        <tr>
-            <td>Châu Đại Dương</td>
-            <td>105.212</td>
-            <td>23.560</td>
-        </tr>
-    </table><br/>
-    <h4>số liệu thống kê về ca nhiễm và ca tử vọng tại 1 số quốc gia trên thế giới</h4>
-    </span>
-        <span id="video">
-    <iframe width="440px" height="260px" src="https://www.youtube.com/embed/_5xV9Edscok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
-     <h4>Cập nhật tình hình dịch trên thế giới</h4>
-</span>
-
-    </div>
-
-
-
-
-</body>
 </html>
